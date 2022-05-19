@@ -26,6 +26,7 @@ namespace Full_GRASP_And_SOLID
         {
             Step step = new Step(input, quantity, equipment, tim);
             this.steps.Add(step);
+            return step;
         }
 
         public void RemoveStep(Step step)
