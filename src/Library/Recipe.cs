@@ -15,8 +15,16 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public void AddStep(Step step)
+        /// <summary>
+        /// Le doy la responsabilidad de crear las instancias de Step a Recipe ya que esta contiene a las instancias de Step. 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="quantity"></param>
+        /// <param name="equipment"></param>
+        /// <param name="tim"></param>
+        public void AddStep(Product input, double quantity, Equipment equipment, int tim)
         {
+            Step step = new Step(input, quantity, equipment, tim);
             this.steps.Add(step);
         }
 
